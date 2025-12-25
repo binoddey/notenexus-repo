@@ -130,6 +130,11 @@ UI structure ≠ business logic.
 - Instagram: https://www.instagram.com/notenexus.in
 
 
+---
+## Copyright
 
-© Note Nexus  
-All rights reserved.
+© 2025 NoteNexus. All rights reserved.
+
+This repository is publicly accessible for demonstration purposes only.
+Unauthorized use, reproduction, or distribution is prohibited.
+
