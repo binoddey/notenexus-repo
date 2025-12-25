@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Nexus - Privacy Policy</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity=""
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../index.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], },
+                    colors: { nexus: { black: '#050505', gold: '#FFD700', yellow: '#FACC15' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FACC15;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Typography for the document */
+        .prose h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .prose p {
+            color: #9CA3AF;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .prose ul {
+            list-style-type: disc;
+            color: #9CA3AF;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #FACC15;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px] animate-float"></div>
+        <div
+            class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-yellow-600/5 rounded-full blur-[150px] animate-float-delayed">
+        </div>
+        <div class="absolute inset-0 bg-grid z-[-1]"></div>
+    </div>
+
+    <!-- NAVBAR: migrated/merged from notes.html (glass + responsive + mobile menu + shrink on scroll) -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div
+                class="flex justify-between items-center bg-black/50 backdrop-blur-lg border border-white/10 rounded-full px-6 py-3">
+                <a href="../index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-8 h-8 bg-gradient-to-br from-yellow-300 to-yellow-600 rounded-lg flex items-center justify-center text-black font-bold text-lg transform transition-transform group-hover:rotate-12 logo-shine">
+                        <img src="../Note Nexus Logo.jpg" alt="Logo" class="w-full h-full object-contain">
+                    </div>
+                    <span
+                        class="font-display font-bold text-xl tracking-wide text-white group-hover:text-yellow-400 transition logo-shine">Note
+                        Nexus</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-sm text-gray-300 hover:text-yellow-400 transition-all">
+                        Home
+                    </a>
+
+                    <a href="../features.html" class="text-sm text-gray-300 hover:text-yellow-400 transition-all">
+                        Features
+                    </a>
+
+                    <a href="../notes/notes.html"
+                        class="text-sm text-yellow-400 font-medium hover:text-white transition-all">
+                        Notes
+                    </a>
+
+                    <!-- <a href="community.html"
+                        class="text-sm text-gray-300 hover:text-yellow-400 transition-all">
+                        Community
+                    </a> -->
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="../notes/notes.html"
+                        class="hidden md:block px-5 py-2 text-sm font-semibold text-black bg-yellow-400 rounded-full hover:bg-yellow-300 hover:shadow-[0_0_20px_rgba(250,204,21,0.4)] transition-all transform hover:-translate-y-0.5 active:scale-95">
+                        Notes Library
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                    <!-- <button onclick="openAuthModal()" 
+                        class="px-6 py-2 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 transition">
+                        Login / Sign Up
+                    </button> -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu (copied from notes.html to keep parity) -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-4 right-4 bg-[#111] border border-white/10 rounded-2xl p-4 flex-col space-y-4 shadow-2xl">
+            <a href="../index.html/home"
+                class="block text-center py-2 text-gray-300 hover:text-yellow-400 transition-all">Home</a>
+            <a href="../features.html"
+                class="block text-center py-2 text-gray-300 hover:text-yellow-400 transition-all">Features</a>
+            <!-- <a href="#mentorship" class="block text-center py-2 text-gray-300 hover:text-yellow-400 hover:bg-white/5 rounded-lg">Mentorship</a> -->
+            <!-- <a href="#community"
+                class="block text-center py-2 text-gray-300 hover:text-yellow-400 transition-all">Community</a> -->
+            <a href="../notes/notes.html"
+                class="block text-center py-3 font-bold bg-yellow-400 text-black rounded-lg">Get
+                Notes</a>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span
+                    class="px-3 py-1 rounded-full bg-yellow-400/10 text-yellow-400 text-xs font-bold border border-yellow-400/20 mb-4 inline-block">
+                    Legal Documentation
+                </span>
+                <h1 class="font-display text-4xl md:text-6xl font-bold text-white mb-4">
+                    Disclaimer
+                </h1>
+                <p class="text-gray-500">Last Updated: October 2025</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-8 md:p-12 prose">
+                <p>
+                    The information provided by Note Nexus (“we,” “our,” or “us”) on notenexus.in is for general
+                    educational and informational purposes only. All content available on this website is provided
+                    in good faith; however, we make no representation or warranty of any kind, express or implied,
+                    regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any
+                    information on the site.
+                </p>
+
+                <h2>1. Educational Purpose Only</h2>
+                <p>
+                    All notes, study materials, resources, and mentorship-related content shared on Note Nexus are
+                    intended solely for learning and academic support. They should not be considered a substitute
+                    for professional advice, official textbooks, classroom instruction, or guidance from qualified
+                    educators or institutions.
+                </p>
+
+                <h2>2. No Academic or Career Guarantees</h2>
+                <p>
+                    While we strive to provide high-quality and relevant resources for B.Tech students, Note Nexus
+                    does not guarantee academic performance, examination results, grades, placements, internships,
+                    or career outcomes based on the use of our content.
+                </p>
+
+                <h2>3. External Links Disclaimer</h2>
+                <p>
+                    The website may contain links to external websites or third-party content. Such links are provided
+                    solely as a convenience to users. Note Nexus does not monitor, endorse, or take responsibility
+                    for the accuracy, reliability, or completeness of information on external websites.
+                </p>
+
+                <h2>4. Limitation of Liability</h2>
+                <p>
+                    Under no circumstances shall Note Nexus, its founders, contributors, or affiliates be liable for
+                    any direct, indirect, incidental, consequential, or special damages arising out of or in
+                    connection with your use of the website or reliance on any information provided.
+                </p>
+
+                <h2>5. Content Updates and Changes</h2>
+                <p>
+                    We reserve the right to modify, update, or remove content on the website at any time without
+                    prior notice. We are not obligated to update any information that may become outdated over time.
+                </p>
+
+                <h2>6. Contact Us</h2>
+                <p>
+                    If you have any questions regarding this Disclaimer, please contact us at
+                    <a href="mailto:mail.notenexus@gmail.com" class="text-yellow-400 hover:underline">
+                        mail.notenexus@gmail.com
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- footer (kept, minimal changes) -->
+    <footer class="bg-[#020202] border-t border-white/10 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-display font-bold text-white">Note Nexus</h3>
+                <p class="text-gray-500 text-sm">Empowering B.Tech students with the resources they need to succeed.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Platform</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="index1.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Home</a></li>
+                    <li><a href="notes.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Notes Library</a>
+                    </li>
+                    <li><a href="community.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Community</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="policy.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Privacy Policy</a>
+                    </li>
+                    <li><a href="tc.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Terms &amp;
+                            Conditions</a></li>
+                    <li><a href="Disclaimer.html"
+                            class="hover:text-yellow-400 transition hover:translate-x-1 inline-block">Disclaimer</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/notenexus/" target="_blank" class="social-icon"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@notenexusofficial" target="_blank" class="social-icon"
+                    aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.instagram.com/notenexus.in/" target="_blank" class="social-icon"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://x.com/itsnotenexus" target="_blank" class="social-icon" aria-label="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="https://discord.gg/XCfvh3bu" target="_blank" class="social-icon" aria-label="Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+
+                <a href="mailto:mail.notenexus@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="copyright text-center text-xs text-gray-600 pt-8 border-t border-white/5">&copy; 2025 Note Nexus.
+            All rights
+            reserved.</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
